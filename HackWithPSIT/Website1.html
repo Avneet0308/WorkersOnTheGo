@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><title>Necessity Portal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+	box-sizing:border-box;
+}
+.navbar {
+  overflow: hidden;
+  background-color: green;
+  top: 0;
+  width: 100%;
+  z-index: 150;
+  z-shadow:15px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding:16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: black;
+  color: #f2f2f2;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
+}	
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+}
+.menu a {
+  background-color:green;
+  float:left;
+  padding:40px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+
+@media only screen and (max-width:620px) 
+{
+  .menu, .main,
+  {
+    width:100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:black;">
+
+<div class="logo" style="background-color:black;padding:1px;text-align:center;">
+<a href="Home.html"><img src="logo.png" width="175" height="165"></a>
+  <h1 style="color:#f2f2f2;">Workers On The Go</h1>
+</div>
+<div class="navbar">
+  <a href="Website1.html">Home</a>
+  <a href="Contact.html">Contact</a>
+ <a href="Aboutus.html">About Us</a>
+    <a href="Login.aspx">Login</a>
+  <a href="Registration.aspx">SignUp</a>
+</div>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 8</div>
+  <a href="Login.html"><img src="carpenter1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 8</div>
+  <a href="Login.html"><img src="maid1.jpg" style="width:100%"><a>
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 8</div>
+  <a href="Login.html"><img src="plumber1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 8</div>
+  <a href="Login.html"><img src="chemist1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 8</div>
+  <a href="Login.html"><img src="mechanic1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 8</div>
+  <a href="Login.html"><img src="doctor1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 8</div>
+  <a href="Login.html"><img src="cab1.jpg" style="width:100%"><a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 8</div>
+  <a href="Login.html"><img src="electrician1.jpg" style="width:100%"><a>
+</div>
+
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
+
+<div style="background-color:green;text-align:center;padding:10px;margin-top:7px;">© copyright prakhar.agnihotri55@gmail.com</div>
+
+</body>
+</html>
+
+
+
+
